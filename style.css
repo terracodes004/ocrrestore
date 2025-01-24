@@ -1,0 +1,304 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+/* Gradient background for header, aside, and footer */
+header, aside, footer {
+    background: linear-gradient(to bottom, #1E90FF, #00BFFF);
+    color: white;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    font-size: 1.5rem; /* Use rem for better scalability */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header stays above other content */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li img {
+    width: 30px; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Aside styling */
+aside {
+    padding: 20px;
+    width: 20%;
+    position: fixed;
+    top: 195px; /* Adjust this value based on your header height */
+    bottom: 60px; /* Adjust this value based on your footer height */
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-right: 2px solid #ddd;
+    font-size: 1.1em;
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* Consistent padding for aside list */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+aside ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+aside ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+aside ul li img {
+    width: 30px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+aside ul li img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+    padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
+    background: #f0f8ff;
+    width: 75%;
+    float: right;
+    transition: width 2s;
+}
+
+main section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 5rem;
+    width: 90%;
+}
+
+main section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main section h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 10px;
+}
+
+main section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the footer stays above other content */
+}
+
+/* Clearfix for floats */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+/* Loading screen styling */
+#loadingScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it stays above all other content */
+}
+
+.loader {
+    font-size: 2em;
+    color: #1E90FF;
+    text-align: center;
+}
+/* Aside styling */
+
+
+
+/* Main content styling */
+main {
+    margin-left: 220px; /* To accommodate the width of the aside */
+    padding: 20px;
+    padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+    padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
+    background: #f0f8ff;
+}
+
+main section {
+    margin-bottom: 40px;
+    padding: 20px;
+    margin-top: 5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+main section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main section h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 10px;
+}
+
+main section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the footer stays above other content */
+}
+
+/* Clearfix for floats */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+/* Hide full content initially */
+.full-content {
+    display: none;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 100%;
+    filter: blur(0.11px);
+    height: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
