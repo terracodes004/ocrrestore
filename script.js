@@ -135,3 +135,31 @@ function gh() {
     document.getElementById("cc").innerHTML =  "<img id=\"logoIcon\" src=\"img/icons/lbon.png\" alt=\"Logo\" onclick='go()'>"
     applyUserPreferences(); // Reset to default styles
 };
+
+// Countdown Timer
+document.getElementById('enableCountdown').addEventListener('click', function() {
+    const countdownContainer = document.getElementById('countdown');
+    countdownContainer.style.display = 'block';
+    const oceanCleaningDay = new Date(new Date().getFullYear(), 2, 22); // March 22
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeDifference = oceanCleaningDay - now;
+
+        if (timeDifference <= 0) {
+            countdownContainer.textContent = "Ocean Cleaning Day is here!";
+            clearInterval(countdownInterval);
+            return;
+        }
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        countdownContainer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initialize the countdown immediately
+});
