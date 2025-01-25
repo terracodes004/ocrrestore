@@ -317,10 +317,9 @@ footer {
 }
 /* CSS for all buttons */
 button {
-    background-color: #4CAF50; /* Green background */
+    background-color: white; /* Green background */
     border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Add some padding */
+    color: black; /* White text */
     text-align: center; /* Center the text */
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Make the buttons inline elements */
@@ -334,7 +333,7 @@ button {
 
 /* Hover effects */
 button:hover {
-    background-color: #45a049; /* Darker green background on hover */
+    background-color: grey; /* Darker green background on hover */
     transform: scale(1.05); /* Slightly enlarge the button */
 }
 
