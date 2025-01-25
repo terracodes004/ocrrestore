@@ -59,7 +59,7 @@ nav ul li img {
 
 /* Aside styling */
 aside {
-    padding: 20px;
+    padding: 0;
     width: 20%;
     position: fixed;
     top: 195px; /* Adjust this value based on your header height */
