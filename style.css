@@ -61,7 +61,7 @@ aside {
     padding: 0;
     width: 30%;
     position: fixed;
-    top: 180px; /* Adjust this value based on your header height */
+    top: 170px; /* Adjust this value based on your header height */
     bottom: 60px; /* Adjust this value based on your footer height */
     overflow-y: auto;
     box-sizing: border-box;
