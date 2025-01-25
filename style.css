@@ -109,7 +109,7 @@ aside ul li img:hover {
 
 /* Main content styling */
 main {
-    padding: 20px;
+    padding: 10px;
     padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
     padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
     background: #f0f8ff;
