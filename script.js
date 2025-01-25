@@ -157,7 +157,7 @@ document.getElementById('enableCountdown').addEventListener('click', function() 
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-        countdownContainer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        countdownContainer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
     const countdownInterval = setInterval(updateCountdown, 1000);
