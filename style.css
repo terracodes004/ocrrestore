@@ -113,7 +113,7 @@ main {
     padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
     padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
     background: #f0f8ff;
-    width: 75%;
+    width: 55%;
     float: right;
     transition: width 2s;
 }
