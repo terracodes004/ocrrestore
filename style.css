@@ -20,7 +20,7 @@ header, aside, footer {
 /* Header styling */
 header {
     text-align: center;
-    font-size: 1.5rem; /* Use rem for better scalability */
+    font-size: 1rem; /* Use rem for better scalability */
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
