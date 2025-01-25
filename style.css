@@ -29,7 +29,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure the header stays above other content */
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
