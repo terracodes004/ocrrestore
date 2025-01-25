@@ -123,3 +123,9 @@ function sendNotification() {
 
 // Check date and notify user if necessary when the page loads
 document.addEventListener('DOMContentLoaded', checkDateAndNotify);
+function go() {
+    localStorage.setItem('sectionBgColor', 'black');
+    localStorage.setItem('sectionTextColor', 'white');
+    document.getElementById("cc").innerHTML = "<img id=\"reverseTheme\" src=\"img/icons/iboff.png\" aria-label=\"Reverse Theme\" onclick='gh()'>"
+    applyUserPreferences();
+};
