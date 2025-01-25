@@ -78,6 +78,7 @@ document.querySelectorAll('.see-more').forEach(link => {
 
 document.getElementById('enableNotifications').addEventListener('click', function() {
     // Request permission for notifications
+    alert("THANK YOU FOR YOUR COONTRIBUTION!!!") 
     if (Notification.permission !== 'granted') {
         Notification.requestPermission().then(function(permission) {
             if (permission === 'granted') {
