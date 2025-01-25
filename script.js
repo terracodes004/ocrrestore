@@ -8,8 +8,8 @@ document.getElementById('navToggle').addEventListener('click', function() {
 
     } else {
         navMenu.style.display = 'block';
-        document.getElementById("fff").style.width = "20%"
-        document.querySelector("main").style.width = "75%"
+        document.getElementById("fff").style.width = "30%"
+        document.querySelector("main").style.width = "65%"
 
 
     }
