@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X2TXESD1N6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2TXESD1N6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-X2TXESD1N6');
-</script>
+        gtag('config', 'G-X2TXESD1N6');
+    </script>
     <meta name="description" content="Get involved in ocean conservation efforts. Find out how you can volunteer with Ocean Restoration and help us protect marine life and habitats.">
     <title>Ocean Cleaning Day Notification</title>
     <link rel="stylesheet" href="style.css">
@@ -22,43 +22,43 @@
             margin: 20px;
         }
         /* CSS for all buttons */
-button {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Add some padding */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the buttons inline elements */
-    font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Add some margin */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effects */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px #999; /* Add a shadow */
-}
+        button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Add some padding */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the buttons inline elements */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Add some margin */
+            cursor: pointer; /* Add a pointer cursor on hover */
+            transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effects */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px #999; /* Add a shadow */
+        }
 
-/* Hover effects */
-button:hover {
-    background-color: #45a049; /* Darker green background on hover */
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
+        /* Hover effects */
+        button:hover {
+            background-color: #45a049; /* Darker green background on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
 
-/* Active effects */
-button:active {
-    background-color: #3e8e41; /* Even darker green background when clicked */
-    box-shadow: 0 2px #666; /* Reduce the shadow */
-    transform: translateY(2px); /* Move the button down */
-}
+        /* Active effects */
+        button:active {
+            background-color: #3e8e41; /* Even darker green background when clicked */
+            box-shadow: 0 2px #666; /* Reduce the shadow */
+            transform: translateY(2px); /* Move the button down */
+        }
     </style>
 </head>
 <body>
-     <header>
+    <header>
         <h1>Ocean Restoration</h1>
         <nav>
             <ul>
                 <li></li>
-                <button style="z-index:100000;"id="navToggle" aria-label="Toggle Navigation Menu" style="float: left;">☰</button> <!-- Navigation toggle button -->
+                <button style="z-index:100000;" id="navToggle" aria-label="Toggle Navigation Menu" style="float: left;">☰</button> <!-- Navigation toggle button -->
 
                 <li><a href="homepage.html"><img src="img/icons/home.png" alt="Home"></a></li>
                 <li><a href="learn.html"><img src="img/icons/learn.png" alt="Learn"></a></li>
@@ -68,22 +68,187 @@ button:active {
                 <li><!-- Add this button in the appropriate place within your HTML, perhaps within the header or footer -->
                     
             </ul>
-            
-            
         </nav>
     </header>
     <fieldset style="margin-top:5cm;">
-        <legend>Join Ocean cleanig day</legend>
+        <legend>Join Ocean Cleaning Day</legend>
         <h1>Ocean Cleaning Day</h1>
-    <p>Join us on <strong>March 22</strong> for Ocean Cleaning Day!</p>
-    <p>We will send you a notification on that day.</p>
-    <button id="enableNotifications">Enable Notifications</button>
-<p id="countdownContainer"></p>
+        <p>Join us on <strong>March 22</strong> for Ocean Cleaning Day!</p>
+        <p>We will send you a notification on that day.</p>
+        <button id="enableNotifications">Enable Notifications</button>
+        <button id="enableCountdown">Enable Countdown</button>
+        <p id="countdownContainer"></p>
     </fieldset>
-    
-    <script src="script.js"></script>
+
+    <script>
+        // Navigation menu toggle
+        document.getElementById('navToggle').addEventListener('click', function() {
+            var navMenu = document.getElementById('navMenu');
+            if (navMenu.style.display === 'block') {
+                navMenu.style.display = 'none';
+                document.getElementById("fff").style.width = "0%";
+                document.querySelector("main").style.width = "90%";
+            } else {
+                navMenu.style.display = 'block';
+                document.getElementById("fff").style.width = "30%";
+                document.querySelector("main").style.width = "65%";
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic content update example
+        document.addEventListener('DOMContentLoaded', function() {
+            const introSection = document.getElementById('intro');
+            const dynamicContent = document.createElement('p');
+            dynamicContent.textContent = 'Did you know? Oceans cover more than 70% of the Earth\'s surface and contain 97% of the planet\'s water!';
+            introSection.appendChild(dynamicContent);
+            applyUserPreferences(); // Apply preferences when the page loads
+        });
+
+        // Hide loading screen once the page is fully loaded
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.display = 'none';
+        });
+
+        // Save user's preference in local storage
+        function savePreferences() {
+            localStorage.setItem('sectionBgColor', 'black');
+            localStorage.setItem('sectionTextColor', 'white');
+            document.getElementById("cc").innerHTML = "<img id=\"reverseTheme\" src=\"img/icons/iboff.png\" aria-label=\"Reverse Theme\" onclick='resetPreferences()'>";
+            applyUserPreferences();
+        }
+
+        // Apply user's preferences
+        function applyUserPreferences() {
+            const sections = document.querySelectorAll('main section');
+            const bgColor = localStorage.getItem('sectionBgColor') || '';
+            const textColor = localStorage.getItem('sectionTextColor') || '';
+
+            sections.forEach(section => {
+                section.style.backgroundColor = bgColor;
+                section.style.color = textColor;
+                document.querySelector("main").style.background = bgColor;
+            });
+        }
+
+        // Reverse the theme
+        function resetPreferences() {
+            localStorage.removeItem('sectionBgColor');
+            localStorage.removeItem('sectionTextColor');
+            document.getElementById("cc").innerHTML = "<img id=\"logoIcon\" src=\"img/icons/lbon.png\" alt=\"Logo\" onclick='savePreferences()'>";
+            applyUserPreferences(); // Reset to default styles
+        }
+
+        // Show full content when "See More" is clicked
+        document.querySelectorAll('.see-more').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parent = this.closest('section');
+                parent.querySelector('.short-content').style.display = 'none';
+                parent.querySelector('.full-content').style.display = 'block';
+            });
+        });
+
+        document.getElementById('enableNotifications').addEventListener('click', function() {
+            // Request permission for notifications
+            alert("THANK YOU FOR YOUR COONTRIBUTION!!!") 
+            if (Notification.permission !== 'granted') {
+                Notification.requestPermission().then(function(permission) {
+                    if (permission === 'granted') {
+                        checkDateAndNotify();
+                    }
+                });
+            } else {
+                checkDateAndNotify();
+            }
+        });
+
+        function checkDateAndNotify() {
+            // Set the Ocean Cleaning Day date
+            const oceanCleaningDay = new Date(new Date().getFullYear(), 2, 22); // March 22
+
+            // Get today's date
+            const today = new Date();
+
+            // Check if today is Ocean Cleaning Day
+            if (today.getMonth() === oceanCleaningDay.getMonth() && today.getDate() === oceanCleaningDay.getDate()) {
+                sendNotification();
+            } else {
+                console.log("Today is not Ocean Cleaning Day.");
+            }
+        }
+
+        function sendNotification() {
+            const options = {
+                body: 'Join us for Ocean Cleaning Day! Click here to volunteer with us.',
+                icon: 'img/icons/ocean-cleaning.png', // Optional: add an icon
+                data: {
+                    url: 'https://ocrrestore.vercel.app' // URL to open when notification is clicked
+                }
+            };
+
+            const notification = new Notification('Ocean Cleaning Day', options);
+            notification.onclick = function(event) {
+                event.preventDefault(); // Prevent the browser from focusing the Notification's tab
+                window.open(notification.data.url, '_blank');
+            };
+        }
+
+        // Check date and notify user if necessary when the page loads
+        document.addEventListener('DOMContentLoaded', checkDateAndNotify);
+        function go() {
+            localStorage.setItem('sectionBgColor', 'black');
+            localStorage.setItem('sectionTextColor', 'white');
+            document.getElementById("cc").innerHTML = "<img id=\"reverseTheme\" src=\"img/icons/iboff.png\" aria-label=\"Reverse Theme\" onclick='gh()'>"
+            applyUserPreferences();
+        };
+        function gh() {
+            localStorage.removeItem('sectionBgColor');
+            localStorage.removeItem('sectionTextColor');
+            document.getElementById("cc").innerHTML =  "<img id=\"logoIcon\" src=\"img/icons/lbon.png\" alt=\"Logo\" onclick='go()'>"
+            applyUserPreferences(); // Reset to default styles
+        };
+
+        // Countdown Timer
+        document.getElementById('enableCountdown').addEventListener('click', function() {
+            const countdownContainer = document.getElementById('countdownContainer');
+            countdownContainer.style.display = 'block';
+            const oceanCleaningDay = new Date(new Date().getFullYear(), 2, 22); // March 22
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeDifference = oceanCleaningDay - now;
+
+                if (timeDifference <= 0) {
+                    countdownContainer.textContent = "Ocean Cleaning Day is here!";
+                    clearInterval(countdownInterval);
+                    return;
+                }
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                countdownContainer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initialize the countdown immediately
+        });
+    </script>
     <footer>
-    <p>&copy; 2023 Ocean Restoration. All rights reserved.</p>
-</footer>
+        <p>&copy; 2023 Ocean Restoration. All rights reserved.</p>
+    </footer>
 </body>
 </html>
