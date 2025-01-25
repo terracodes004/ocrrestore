@@ -2,14 +2,14 @@
 body {
     margin: 0;
     padding: 0;
+}
+body {
     font-family: 'Open Sans', sans-serif;
-    background: #f0f8ff;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
-
 /* Gradient background for header, aside, and footer */
 header, aside, footer {
     background: linear-gradient(to bottom, #1E90FF, #00BFFF);
@@ -69,9 +69,10 @@ aside {
     font-size: 1.1em;
     line-height: 1.6;
     height: 100%;
-    z-index: 10000;
+    z-index:10000;
 }
 
+/* Consistent padding for aside list */
 aside ul {
     list-style: none;
     padding: 0;
@@ -95,7 +96,7 @@ aside ul li:hover {
 }
 
 aside ul li img {
-    width: 30px;
+    width: 30px; /* Adjust the width as needed */
     height: auto;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -107,9 +108,9 @@ aside ul li img:hover {
 
 /* Main content styling */
 main {
-    padding: 20px;
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding: 10px;
+    padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+    padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
     background: #f0f8ff;
     width: 65%;
     float: right;
@@ -118,7 +119,7 @@ main {
 
 main section {
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 10px;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -129,7 +130,7 @@ main section {
 
 main section:hover {
     transform: scale(1.02);
-    z-index: 1000000;
+    z-index:1000000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -165,7 +166,6 @@ footer {
 .cf:after {
     clear: both;
 }
-
 /* Loading screen styling */
 #loadingScreen {
     position: fixed;
@@ -183,28 +183,87 @@ footer {
     color: #1E90FF;
     text-align: center;
 }
+/* Aside styling */
 
-/* Slideshow styling */
+
+
+/* Main content styling */
+main {
+    margin-left: 220px; /* To accommodate the width of the aside */
+    padding: 20px;
+    padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+    padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
+    background: #f0f8ff;
+}
+
+main section {
+    margin-bottom: 40px;
+    padding: 20px;
+    margin-top: 5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+main section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main section h2 {
+    font-size: 1.8em;
+    color: #1E90FF;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 10px;
+}
+
+main section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000; /* Ensure the footer stays above other content */
+}
+
+/* Clearfix for floats */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+/* Hide full content initially */
+.full-content {
+    display: none;
+}
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
-
 .mySlides {
     display: none;
 }
-
 .mySlides img {
     width: 100%;
     filter: blur(0.11px);
     height: auto;
 }
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 0;
     width: auto;
     padding: 16px;
     margin-top: -22px;
@@ -213,18 +272,14 @@ footer {
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    user-select: none;
 }
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
-
 .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -234,36 +289,20 @@ footer {
     width: 100%;
     text-align: center;
 }
-
 .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
 }
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    aside {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    main {
-        width: 100%;
-        margin-left: 0;
-        padding-top: 140px; /* Adjust this value to accommodate the fixed header height */
-    }
-
-    header, footer {
-        padding: 10px;
-    }
-}
-
 @media only screen and (min-width: 769px) {
     aside {
         width: 25%;
@@ -272,34 +311,35 @@ footer {
     main {
         width: 70%;
         margin-left: 25%;
-        padding-top: 120px;
-        padding-bottom: 80px;
+        padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+        padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
     }
 }
-
-/* Button styling */
+/* CSS for all buttons */
 button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    border-radius: 8px;
-    box-shadow: 0 4px #999;
+    background-color: white; /* Green background */
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the buttons inline elements */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effects */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px #999; /* Add a shadow */
 }
 
+/* Hover effects */
 button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    background-color: grey; /* Darker green background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
+/* Active effects */
 button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
+    background-color: #3e8e41; /* Even darker green background when clicked */
+    box-shadow: 0 2px #666; /* Reduce the shadow */
+    transform: translateY(2px); /* Move the button down */
+}
