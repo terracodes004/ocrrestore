@@ -129,3 +129,9 @@ function go() {
     document.getElementById("cc").innerHTML = "<img id=\"reverseTheme\" src=\"img/icons/iboff.png\" aria-label=\"Reverse Theme\" onclick='gh()'>"
     applyUserPreferences();
 };
+function gh() {
+    localStorage.removeItem('sectionBgColor');
+    localStorage.removeItem('sectionTextColor');
+    document.getElementById("cc").innerHTML =  "<img id=\"logoIcon\" src=\"img/icons/lbon.png\" alt=\"Logo\" onclick='go()'>"
+    applyUserPreferences(); // Reset to default styles
+};
