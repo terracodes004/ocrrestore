@@ -315,3 +315,32 @@ footer {
         padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
     }
 }
+/* CSS for all buttons */
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the buttons inline elements */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effects */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px #999; /* Add a shadow */
+}
+
+/* Hover effects */
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active effects */
+button:active {
+    background-color: #3e8e41; /* Even darker green background when clicked */
+    box-shadow: 0 2px #666; /* Reduce the shadow */
+    transform: translateY(2px); /* Move the button down */
+}
