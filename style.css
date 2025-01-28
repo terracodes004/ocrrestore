@@ -343,6 +343,14 @@ button:active {
     box-shadow: 0 2px #666; /* Reduce the shadow */
     transform: translateY(2px); /* Move the button down */
 }
+@media only screen and (max-width: 600px){
+    aside{
+        width:0;
+    }
+    main{
+        width:90%
+    }
+}
 /* Additional styling for help page */
         .help-container {
             padding: 20px;
