@@ -177,3 +177,41 @@ h2 {
         height: auto;
     }
 }
+/* Header Styles */
+
+header {
+    background: linear-gradient(to bottom, #00698f, #003d4d);
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Aside Styles */
+
+aside {
+    background: linear-gradient(to bottom, #00698f, #003d4d);
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 20%;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Footer Styles */
+
+footer {
+    background: linear-gradient(to bottom, #00698f, #003d4d);
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
