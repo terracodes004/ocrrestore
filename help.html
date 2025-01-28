@@ -5,96 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - Ocean Restoration</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional styling for help page */
-        .help-container {
-            padding: 20px;
-            margin-top: 60px;
-        }
-
-        .help-section {
-            margin-bottom: 20px;
-        }
-
-        .help-section h2 {
-            font-size: 1.5em;
-            color: #1E90FF;
-        }
-
-        .help-section p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        .help-section ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .help-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .aside-section {
-            background: linear-gradient(to bottom, #1E90FF, #00BFFF);
-            color: white;
-            padding: 20px;
-            border-right: 2px solid #ddd;
-            position: fixed;
-            top: 60px;
-            bottom: 0;
-            width: 20%;
-            overflow-y: auto;
-        }
-
-        .aside-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .aside-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .aside-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .aside-section ul li a:hover {
-            color: #FFD700;
-        }
-
-        main {
-            margin-left: 22%;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .aside-section {
-                position: relative;
-                width: 100%;
-                border-right: none;
-                top: 0;
-                bottom: auto;
-            }
-
-            main {
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .help-section h2 {
-                font-size: 1.2em;
-            }
-
-            .help-section p {
-                font-size: 1em;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -104,7 +14,7 @@
                 <button id="navToggle" aria-label="Toggle Navigation Menu" style="float: left; position: fixed; z-index: 1000000;">☰</button> <!-- Navigation toggle button -->
                 <li><a href="homepage.html"><img src="img/icons/home.png" alt="Home"></a></li>
                 <li><a href="learn.html"><img src="img/icons/learn.png" alt="Learn"></a></li>
-                <li><a href="about.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFL99sdaGfwESwm4rtn1tQUliiN5hIOevBZA&sg" alt="Learn"></a></li>
+                <li><a href="about.html"><img src="img/icons/about.png" alt="About"></a></li>
                 <li onclick="change()" id="cc"><img id="logoIcon" src="img/icons/lbon.png" alt="Logo" onclick='go()'></li> <!-- Added id -->
             </ul>
         </nav>
@@ -157,7 +67,4 @@
     </main>
     <script src="script.js"></script>
     <footer>
-        <p>&copy; 2023 Ocean Restoration. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy;
