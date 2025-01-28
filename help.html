@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - Ocean Restoration</title>
     <link rel="stylesheet" href="style.css">
-    <!--<style>
+    <style>
         /* Additional styling for help page */
         .help-container {
             padding: 20px;
@@ -69,24 +69,43 @@
         main {
             margin-left: 22%;
         }
-    </style>-->
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .aside-section {
+                position: relative;
+                width: 100%;
+                border-right: none;
+                top: 0;
+                bottom: auto;
+            }
+
+            main {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .help-section h2 {
+                font-size: 1.2em;
+            }
+
+            .help-section p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Ocean Restoration</h1>
         <nav>
             <ul>
-                <ul>
-                <button id="navToggle" aria-label="Toggle Navigation Menu" style="float: left;postion:fixed; z-index:1000000;">☰</button> <!-- Navigation toggle button -->
-
+                <button id="navToggle" aria-label="Toggle Navigation Menu" style="float: left; position: fixed; z-index: 1000000;">☰</button> <!-- Navigation toggle button -->
                 <li><a href="homepage.html"><img src="img/icons/home.png" alt="Home"></a></li>
                 <li><a href="learn.html"><img src="img/icons/learn.png" alt="Learn"></a></li>
                 <li><a href="about.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFL99sdaGfwESwm4rtn1tQUliiN5hIOevBZA&sg" alt="Learn"></a></li>
-                
                 <li onclick="change()" id="cc"><img id="logoIcon" src="img/icons/lbon.png" alt="Logo" onclick='go()'></li> <!-- Added id -->
-                <li><!-- Add this button in the appropriate place within your HTML, perhaps within the header or footer -->
-                    
-            </ul>
             </ul>
         </nav>
     </header>
