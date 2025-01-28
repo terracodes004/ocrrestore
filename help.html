@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - Ocean Restoration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="loadingScreen">
+        <div class="loader">Loading...</div>
+    </div>
     <header>
         <h1>Ocean Restoration</h1>
         <nav>
             <ul>
-                <button id="navToggle" aria-label="Toggle Navigation Menu" style="float: left; position: fixed; z-index: 1000000;">☰</button> <!-- Navigation toggle button -->
+                <li></li>
                 <li><a href="homepage.html"><img src="img/icons/home.png" alt="Home"></a></li>
                 <li><a href="learn.html"><img src="img/icons/learn.png" alt="Learn"></a></li>
                 <li><a href="about.html"><img src="img/icons/about.png" alt="About"></a></li>
-                <li onclick="change()" id="cc"><img id="logoIcon" src="img/icons/lbon.png" alt="Logo" onclick='go()'></li> <!-- Added id -->
+                <li onclick="change()" id="cc"><img id="logoIcon" src="img/icons/lbon.png" alt="Logo" onclick='go()'></li>
             </ul>
         </nav>
     </header>
-    <aside class="aside-section">
+    <button id="navToggle" aria-label="Toggle Navigation Menu" style="z-index:1000000000; position:fixed;">☰</button>
+    <aside id="fff" class="aside-section" style="transition: width 1s;">
         <ul id="navMenu">
-            <li><a href="#navigation-menu">Navigation Menu</a></li>
-            <li><a href="#enabling-notifications">Enabling Notifications</a></li>
-            <li><a href="#countdown-timer">Countdown Timer</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#navigation-menu" class="asi">Navigation Menu</a></li>
+            <li><a href="#enabling-notifications" class="asi">Enabling Notifications</a></li>
+            <li><a href="#countdown-timer" class="asi">Countdown Timer</a></li>
+            <li><a href="#contact-us" class="asi">Contact Us</a></li>
         </ul>
     </aside>
     <main class="help-container">
@@ -65,6 +70,9 @@
             </ul>
         </section>
     </main>
-    <script src="script.js"></script>
     <footer>
-        <p>&copy;
+        <p>&copy; 2023 Ocean Restoration. All rights reserved.</p>
+        <p><a href="https://web.facebook.com/profile.php?id=61572283629323" target="_blank">Follow us on Facebook</a></p>
+    </footer>
+</body>
+</html>
