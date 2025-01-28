@@ -1,5 +1,12 @@
-/* Global Styles */
-
+header nav ul li img {
+    width: 20px; /* Adjust the width to your desired size */
+    height: 20px; /* Adjust the height to your desired size */
+}/* Global Styles */
+header nav ul li img {
+    max-width: 20px; /* Adjust the maximum width to your desired size */
+    max-height: 20px; /* Adjust the maximum height to your desired size */
+    height: auto;
+}
 * {
     box-sizing: border-box;
     margin: 0;
