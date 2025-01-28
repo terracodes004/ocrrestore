@@ -303,13 +303,16 @@ footer {
     from {opacity: .4} 
     to {opacity: 1}
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 769px) {
     aside {
         width: 0%;
     }
 
     main {
         width: 90%;
+        margin-left: 25%;
+        padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+        padding-bottom: 80px;
          /* Adjust this value to accommodate the fixed footer height */
     }
 }
