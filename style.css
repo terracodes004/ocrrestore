@@ -310,9 +310,7 @@ footer {
 
     main {
         width: 90%;
-        margin-left: 25%;
-        padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
-        padding-bottom: 80px; /* Adjust this value to accommodate the fixed footer height */
+         /* Adjust this value to accommodate the fixed footer height */
     }
 }
 /* CSS for all buttons */
