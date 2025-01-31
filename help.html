@@ -6,138 +6,152 @@
     <title>Help - Ocean Restoration</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Base Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+       .help-section {
+    padding: clamp(1rem, 3vw, 2rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding-top: 80px; /* Space for fixed header */
-        }
+.help-section h2 {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    margin-bottom: 1.2em;
+}
 
-        /* Fixed Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #006994;
-            color: white;
-            padding: 1rem;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+.help-section ul {
+    padding-left: clamp(1rem, 3vw, 2rem);
+}
 
-        header h1 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            text-align: center;
-            margin: 0;
-        }
+.help-section li {
+    margin-bottom: 0.8em;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.7;
+}
 
-        /* Sidebar Styles */
-        aside.aside-section {
-            position: fixed;
-            left: -250px;
-            top: 80px; /* Below header */
-            width: 250px;
-            height: calc(100vh - 80px);
-            background: #fff;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            transition: left 0.3s ease;
-            z-index: 999;
-            overflow-y: auto;
-        }
+/* Grid Layout for FAQs */
+@media (min-width: 768px) {
+    .help-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .help-section {
+        break-inside: avoid;
+    }
+}
 
-        aside.aside-section.active {
-            left: 0;
-        }
+/* Fluid Typography */
+body {
+    font-size: clamp(16px, 1.5vw, 18px);
+}
 
-        /* Main Content Adjustment */
-        main.help-container {
-            padding: 2rem;
-            transition: margin-left 0.3s ease;
-        }
+footer p {
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
 
-        /* Navigation Menu */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            list-style: none;
-            padding: 1rem 0;
-        }
+/* Responsive Table */
+.contact-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+}
 
-        nav img {
-            width: 32px;
-            height: 32px;
-            transition: transform 0.3s ease;
-        }
+/* Image Responsiveness */
+.content-image {
+    width: min(100%, 600px);
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+}
 
-        /* Mobile Menu Toggle */
-        #navToggle {
-            display: none;
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            background: #fff;
-            border: 2px solid #007bff;
-            padding: 0.5rem;
-            cursor: pointer;
-            z-index: 1001;
-        }
+/* Card Layout */
+.help-section {
+    background: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        /* Responsive Breakpoints */
-        @media (min-width: 769px) {
-            /* Desktop: Always show sidebar */
-            aside.aside-section {
-                left: 0;
-                top: 80px;
-            }
+/* Spacing Adjustments */
+@media (max-width: 768px) {
+    main.help-container {
+        grid-gap: 1rem;
+    }
+    
+    aside.aside-section {
+        width: 200px;
+    }
+    
+    footer {
+        margin-left: 0;
+        padding: 1rem 0.5rem;
+    }
+}
 
-            main.help-container {
-                margin-left: 250px;
-            }
+@media (max-width: 480px) {
+    .help-section {
+        border-radius: 0;
+        margin: 0 -1rem 1rem;
+        width: calc(100% + 2rem);
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
 
-            footer {
-                margin-left: 250px;
-            }
-        }
+/* Fluid Margins */
+main.help-container {
+    padding: clamp(1rem, 3vw, 2rem);
+}
 
-        @media (max-width: 768px) {
-            /* Mobile: Hide sidebar by default */
-            body {
-                padding-top: 120px; /* More space for header on mobile */
-            }
+/* Responsive Links */
+a {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    padding: 0.3em 0.5em;
+}
 
-            header {
-                padding: 0.5rem;
-            }
+/* Touch-friendly Elements */
+button, .asi {
+    min-width: 44px;
+    min-height: 44px;
+}
 
-            #navToggle {
-                display: block;
-            }
+/* Aspect Ratio Handling */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
 
-            main.help-container {
-                padding: 1rem;
-            }
-        }
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-        @media (max-width: 480px) {
-            aside.aside-section {
-                width: 100%;
-                left: -100%;
-            }
-
-            aside.aside-section.active {
-                left: 0;
-            }
-        }
-
-        /* Rest of your existing styles... */
-        /* (Include all previous styles from earlier answer here) */
+/* Print Styles */
+@media print {
+    aside.aside-section, header {
+        display: none;
+    }
+    
+    main.help-container {
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    .help-section {
+        box-shadow: none;
+        border: none;
+        page-break-inside: avoid;
+    }
+}
 </style>
     </head>
 <body>
