@@ -5,6 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - Ocean Restoration</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: #006994;
+            color: white;
+            padding: 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        nav img {
+            width: clamp(24px, 3vw, 32px);
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu Toggle */
+        #navToggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: #fff;
+            border: 2px solid #007bff;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Sidebar */
+        aside.aside-section {
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+
+        .asi {
+            display: block;
+            padding: 0.8rem;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .asi:hover {
+            background: #f0f0f0;
+        }
+
+        /* Main Content */
+        main.help-container {
+            margin-left: 250px;
+            padding: 2rem;
+            transition: margin-left 0.3s ease;
+        }
+
+        .help-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-left: 250px;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            main.help-container, footer {
+                margin-left: 0;
+                padding: 1.5rem;
+            }
+
+            aside.aside-section {
+                width: 0;
+                z-index: 999;
+            }
+
+            aside.aside-section.active {
+                width: 280px;
+            }
+
+            .help-section {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #navToggle {
+                display: block;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            header h1 {
+                margin-top: 2rem;
+            }
+
+            .help-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main.help-container {
+                padding: 1rem;
+            }
+
+            .help-section {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                gap: 0.75rem;
+            }
+
+            aside.aside-section.active {
+                width: 100%;
+            }
+
+            footer {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            #navToggle {
+                top: 0.5rem;
+                right: 0.5rem;
+                padding: 0.3rem;
+            }
+        }
+
+        /* Loading Screen */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #006994;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
 <body>
