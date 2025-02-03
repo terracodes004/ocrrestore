@@ -199,8 +199,7 @@ footer {
     }
     
     aside {
-        width: 100%;
-        position: relative;
+        width: 0%;
         padding-top: 20px;
     }
     main {
