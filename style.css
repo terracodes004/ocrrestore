@@ -200,11 +200,13 @@ footer {
     
     aside {
         width: 0%;
-        padding-top: 20px;
     }
+
     main {
-        width: 100%;
-        margin-left: 0;
-        padding-top: 20px;
+        width: 90%;
+        margin-left: 25%;
+        padding-top: 120px; /* Adjust this value to accommodate the fixed header height */
+        padding-bottom: 80px;
+         /* Adjust this value to accommodate the fixed footer height */
     }
 }
