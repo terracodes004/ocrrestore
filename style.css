@@ -191,21 +191,20 @@ footer {
 }
 
 /* Responsive design for mobile */
+
 @media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
     aside {
         width: 100%;
         position: relative;
         padding-top: 20px;
     }
-
     main {
         width: 100%;
         margin-left: 0;
         padding-top: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
     }
 }
