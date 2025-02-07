@@ -1,42 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X2TXESD1N6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2TXESD1N6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-X2TXESD1N6');
-</script>
+      gtag('config', 'G-X2TXESD1N6');
+    </script>
     
     <meta name="keywords" content="ocean, global warming, save the world">
-<meta name="description" content="Learn more about Ocean Restoration, our history, mission, and the team dedicated to making our oceans cleaner and healthier for future generations.">    <link rel="icon" href="img/icons/logo.jpeg">
+    <meta name="description" content="Learn more about Ocean Restoration, our history, mission, and the team dedicated to making our oceans cleaner and healthier for future generations.">
+    <link rel="icon" href="img/icons/logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
-</head>
-
     <title>Ocean Restoration : Home page</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script> <!-- Include the JavaScript file -->
-</head>
     <style>
-        #oc{
+        #oc {
             display: grid;
-            grid-template-columns: 1fr, 1fr, 1f;
+            grid-template-columns: repeat(3, 1fr); /* Corrected grid-template-columns */
+            gap: 10px; /* Added gap between grid items */
         }
-        @media screen and (max-width:780px){
-            #oc{
-                display: block;
+        @media screen and (max-width: 780px) {
+            #oc {
+                display: block; /* Stack the videos on smaller screens */
+            }
+            #oc iframe {
+                width: 100%; /* Ensure iframes take full width on smaller screens */
+                margin-bottom: 10px; /* Add some space between stacked videos */
             }
         }
-            
     </style>
+</head>
 <body style="text-align:center;">
     <div id="loadingScreen">
         <div class="loader">Loading...</div>
@@ -46,33 +48,27 @@
         <nav>
             <ul>
                 <button id="navToggle" aria-label="Toggle Navigation Menu" style="float: left;">☰</button> <!-- Navigation toggle button -->
-
                 <li><a href="homepage.html"><img src="img/icons/home.png" alt="Home"></a></li>
                 <li><a href="learn.html"><img src="img/icons/learn.png" alt="Learn"></a></li>
                 <li><a href="about.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFL99sdaGfwESwm4rtn1tQUliiN5hIOevBZA&sg" alt="Learn"></a></li>
-                
                 <li onclick="change()" id="cc"><img id="logoIcon" src="img/icons/lbon.png" alt="Logo" onclick='go()'></li> <!-- Added id -->
-                <li><!-- Add this button in the appropriate place within your HTML, perhaps within the header or footer -->
-                    
             </ul>
-            
-            
         </nav>
     </header>
     <main style="margin-top:3cm; width=90%; text-align:center;">
         <fieldset width=90%>
-    <legend>Restore the Ocean Videos</legend>
-    <p>This video provides insights and actions on how to restore and protect our oceans from global warming.</p>
+            <legend>Restore the Ocean Videos</legend>
+            <p>This video provides insights and actions on how to restore and protect our oceans from global warming.</p>
             <div id="oc">
-    <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/vjOmyNA4wZ8?autoplay=1&mute=1" title="Restore the Ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/X_dVQErdQvk?si=dm5rax77S22CJbuN?autoplay=1&mute=1" title="ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/HQTUWK7CM-Y?si=e_aPk-JYlcGt2GR7?autoplay=1&mute=1" title="Protect the ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/vjOmyNA4wZ8?autoplay=1&mute=1" title="Restore the Ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/X_dVQErdQvk?si=dm5rax77S22CJbuN?autoplay=1&mute=1" title="ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/HQTUWK7CM-Y?si=e_aPk-JYlcGt2GR7?autoplay=1&mute=1" title="Protect the ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </fieldset>
     </main>
-<footer>
-    <p>&copy; 2025 Ocean Restoration. All rights reserved.</p>
-    <p><a href="https://web.facebook.com/profile.php?id=61572283629323" target="_blank"> Follw us on facebbok</a></p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Ocean Restoration. All rights reserved.</p>
+        <p><a href="https://web.facebook.com/profile.php?id=61572283629323" target="_blank"> Follow us on Facebook</a></p>
+    </footer>
 </body>
 </html>
