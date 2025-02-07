@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script> <!-- Include the JavaScript file -->
 </head>
+    <style>
+        #oc{
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1f;
+        }
+        @media screen and (max-width:780px){
+            #oc{
+                display: block;
+            }
+        }
+            
+    </style>
 <body style="text-align:center;">
     <div id="loadingScreen">
         <div class="loader">Loading...</div>
@@ -51,10 +63,12 @@
         <fieldset width=90%>
     <legend>Restore the Ocean Video</legend>
     <p>This video provides insights and actions on how to restore and protect our oceans from global warming.</p>
+            <div id="oc">
     <iframe style="width: 100%" height="315" src="https://www.youtube.com/embed/vjOmyNA4wZ8?autoplay=1&mute=1" title="Restore the Ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <iframe style="width: 100%" height="315" src="https://youtu.be/X_dVQErdQvk?si=Fymj4buiop2gXbY6?autoplay=1&mute=1" title="Restore the Ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <iframe style="width: 100%" height="315" src="https://youtu.be/szg3dIZ8xDc?si=7UwzAKgX_c6NNb7q?autoplay=1&mute=1" title="Restore the Ocean" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</fieldset>
+</div>
+        </fieldset>
     </main>
 <footer>
     <p>&copy; 2025 Ocean Restoration. All rights reserved.</p>
